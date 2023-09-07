@@ -1,0 +1,115 @@
+\documentclass{report}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[a4paper, top=0cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % for generating dummy text
+
+% Define a new geometry for the title page
+\newgeometry{a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+\newcommand{\falcon}{%
+	\begin{figure}[htbp]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=1\textwidth]{D:/s7/stockage/Falcon/profetionnel/LOGO_ENSAM.png}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=0.5\textwidth]{C:/Users/soufi/OneDrive/Bureau/Ash/Rapport/Cnesten.jpg}
+		\end{subfigure}
+		\hrule % Add the horizontal line
+	\end{figure}
+}
+
+% Configure the fancyhdr package for custom header
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\renewcommand{\headrulewidth}{0pt} % Remove header rule line
+\fancyhead[L]{\falcon} % Set custom header on the left side
+
+% Redefine chapter to avoid page break issues
+\let\oldchapter\chapter
+\renewcommand{\chapter}[1]{\oldchapter{#1}}
+
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{section}.\arabic{equation}}
+\begin{document}
+	% Apply the title page geometry settings
+	\newgeometry{a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm}
+	
+	\begin{titlepage}
+		\falcon        
+		\vspace*{2cm}
+		
+		\centering
+		{\LARGE Industrial Project Report \par}
+		
+		\vspace{1cm}
+		
+		{\Large Automatique Segmentation of X-ray Images using Deep Learning \par}
+		
+		\vspace{1.5cm}
+		
+		{\large Submitted by: \par}
+		\vspace{0.5cm}
+		
+		{\Large DKHISSI SOUFIANE \quad Yassir BOUSELLAM \par}
+		
+		\vspace{1cm}
+		
+		{\large Supervised by: \par}
+		\vspace{0.5cm}
+		
+		{\Large Taoufik Masrour \par}
+		
+		\vfill
+		
+		{\large A project submitted in partial fulfillment of the requirements for the degree of \par}
+		\vspace{0.5cm}
+		
+		{\Large Your Degree (e.g., Bachelor's, Master's, etc.) \par}
+		
+		\vspace{0.5cm}
+		
+		{\Large GÉNIE INDUSTRIEL: Intelligence Artificielle \& Data Science \par}
+		
+		\vspace{0.5cm}
+		
+		{\Large ENSAM Meknes \par}
+		
+		\vspace{0.5cm}
+		
+		{\Large 06/09/2023 \par}
+	\end{titlepage}
+	
+
+	\restoregeometry
+		
+	\renewcommand{\chaptername}{}
+	
+	\fancyhead[L]{\leftmark \\ \vspace{30pt}}
+	\chapter{Présentation de l'organisme d'accueil}
+	
+	\section{Présentation de l'organisme d'accueil}
+	
+	\subsection{Organisation}
+	\subsection{Mission et Objectifs de l'organisme}
+	\subsubsection{subsubsection falcon}
+	
+	% Some dummy text
+	\lipsum[1-10]
+	\lipsum[1-10]
+	
+	\chapter{Introduction et Presentation du Projet}
+	
+	\section{Introduction et Presentation du Projet}
+	
+	\subsection{Organisation}
+	\subsection{Mission et Objectifs de l'organisme}
+	\subsubsection{subsubsection falcon}
+	\lipsum[1-10]
+	\lipsum[1-10]
+	
+\end{document}
